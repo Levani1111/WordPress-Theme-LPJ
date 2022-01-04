@@ -1,4 +1,4 @@
-# WordPress Theme LPJ :art:
+# WordPress Theme LPJ  ![alt text](https://www.lpjweb.com/wp-content/uploads/2019/08/Logo_LPJweb-150x150.png)
 <!-- 
 ##### Requirements -->
 
@@ -41,7 +41,7 @@ I am using Webpack to combine my SASS and JS, but you do not have to use it if y
 
 <hr>
 
-###### Created by Levani Papashvili @2021-2022
+###### Created by Levani Papashvili @2022
 
 <!-- ### To access phpmyadmin, go to http://localhost:8080/ Username: root Password: somewordpress -->
 <!-- ### To access wordpress, go to http://localhost Username: admin Password: admin -->
