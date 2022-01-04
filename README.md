@@ -1,4 +1,4 @@
-# WordPress Theme LPJ  ![alt text](https://www.lpjweb.com/wp-content/uploads/2019/08/Logo_LPJweb-150x150.png | width=100)
+# WordPress Theme LPJ
 <!-- 
 ##### Requirements -->
 
