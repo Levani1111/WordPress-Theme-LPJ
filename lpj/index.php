@@ -12,6 +12,7 @@
     <?php wp_body_open();?>
         <?php 
             get_template_part('template-parts/nav', 'nav');
+            get_template_part('template-parts/slider', 'slider');
             if(have_posts()){
                 while(have_posts()){
                     the_post();
