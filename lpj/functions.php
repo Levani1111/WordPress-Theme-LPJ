@@ -14,3 +14,4 @@ add_theme_support('post-thumbnails');
 
 // Image sizes
 add_image_size('post-priview', 280, 179, true);
+add_image_size('post-priview-large', 800, 400, true);
