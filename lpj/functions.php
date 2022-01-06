@@ -6,3 +6,11 @@ function load_bootstrap(){
     wp_enqueue_script('bootstrapjs', get_template_directory_uri() . '/assets/js/bootstrap.min.js', array('jquery'), ' ', true);
 }
 add_action('wp_enqueue_scripts', 'load_bootstrap');
+
+// Theme supports 
+add_theme_support('widgets');
+add_theme_support('menus');
+add_theme_support('post-thumbnails');
+
+// Image sizes
+add_image_size('post-priview', 280, 179, true);
