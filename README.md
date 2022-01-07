@@ -19,6 +19,7 @@ This is a WordPress theme from scratch, and incorporate WooCommerce into it. You
 
 - Creating a new WordPress theme from scratch
 - Using Menus, Widgets and Post Thumbnails
+- Using Custom logo.
 - Different WordPress page templates
 - Bootstrap carousel.
 - Bootstrap cards.
