@@ -15,6 +15,9 @@
             }
         }
     ?>
+   
 </div>
+
+<?php  get_template_part('template-parts/pagination', 'pagination'); ?>
 
 <?php get_footer(); ?>
