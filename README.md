@@ -23,6 +23,7 @@ This is a WordPress theme from scratch, and incorporate WooCommerce into it. You
 - Bootstrap carousel.
 - Bootstrap cards.
 - Bootstrap nav.
+- Bootstrap pagination.
 - themes supoort widgets, menus and post thumbnails.
 - images custome sizes.
 
