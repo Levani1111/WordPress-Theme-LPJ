@@ -17,15 +17,15 @@
 
 This is a WordPress theme from scratch, and incorporate WooCommerce into it. You can customise it with CSS how you want.
 
-- Creating a new WordPress theme from scratch
-- Using Menus, Widgets and Post Thumbnails
+- Creating a new WordPress theme from scratch.
+- Using Menus, Widgets and Post Thumbnails.
 - Using Custom logo.
-- Different WordPress page templates
+- Different WordPress page templates.
+- Using Custom WordPress walker.
 - Bootstrap carousel.
 - Bootstrap cards.
 - Bootstrap nav.
 - Bootstrap pagination.
-- themes supoort widgets, menus and post thumbnails.
 - images custome sizes.
 
 I am using Webpack to combine my SASS and JS, but you do not have to use it if you do not want to. You can simply enqueue your CSS and JS directly in `functions.php`. -->

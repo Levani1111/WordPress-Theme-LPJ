@@ -43,3 +43,6 @@ function lpj_register_menus(){
     ));
 }
 add_action('init', 'lpj_register_menus');
+
+// import walker
+require_once get_template_directory() . '/template-parts/walker.php';
