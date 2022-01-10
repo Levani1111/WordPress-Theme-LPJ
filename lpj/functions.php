@@ -33,3 +33,13 @@ function lpj_custom_logo_setup() {
 }
  
 add_action( 'after_setup_theme', 'lpj_custom_logo_setup' );
+
+// Register menus
+function lpj_register_menus(){
+    register_nav_menus(array(
+        'header-menu' => __('Header Menu', 'lpj'),
+        'footer-menu' => __('Footer Menu', 'lpj'),
+        'sidebar-menu' => __('Sidebar Menu', 'lpj'),
+    ));
+}
+add_action('init', 'lpj_register_menus');
