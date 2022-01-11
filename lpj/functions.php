@@ -9,13 +9,17 @@ function load_bootstrap(){
 }
 add_action('wp_enqueue_scripts', 'load_bootstrap');
 
+
+// import walker
+require_once get_template_directory() . '/template-parts/walker.php';
+
 // Theme supports 
 add_theme_support('widgets');
 add_theme_support('menus');
 add_theme_support('post-thumbnails');
 
 // Image sizes
-add_image_size('post-priview', 280, 179, true);
+add_image_size('post-priview', 280, 171, true);
 add_image_size('post-priview-large', 800, 400, true);
 
 // Custom logo
@@ -44,5 +48,33 @@ function lpj_register_menus(){
 }
 add_action('init', 'lpj_register_menus');
 
-// import walker
-require_once get_template_directory() . '/template-parts/walker.php';
+// Register sidebars
+function lpj_widgets_init() {
+    register_sidebar( array(
+        'name'          => __( 'Primary Sidebar', 'lpj' ),
+        'id'            => 'sidebar-0',
+        'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+        'after_widget'  => '</aside>',
+        'before_title'  => '<h3 class="widget-title">',
+        'after_title'   => '</h3>',
+    ) );
+ 
+    register_sidebar( array(
+        'name'          => __( 'Footer Sidebar 1', 'lpj' ),
+        'id'            => 'sidebar-1',
+        'before_widget' => '',
+        'after_widget'  => '',
+        'before_title'  => '<h3 class="widget-title">',
+        'after_title'   => '</h3>',
+    ) );
+
+    register_sidebar( array(
+        'name'          => __( 'Footer Sidebar 2', 'lpj' ),
+        'id'            => 'sidebar-2',
+        'before_widget' => '',
+        'after_widget'  => '',
+        'before_title'  => '<h3 class="widget-title">',
+        'after_title'   => '</h3>',
+    ) );
+}
+add_action( 'widgets_init', 'lpj_widgets_init' );

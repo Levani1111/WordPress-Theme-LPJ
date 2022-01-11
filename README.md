@@ -22,6 +22,7 @@ This is a WordPress theme from scratch, and incorporate WooCommerce into it. You
 - Using Custom logo.
 - Different WordPress page templates.
 - Using Custom WordPress walker.
+- Using Custom WordPress sidebats.
 - Bootstrap carousel.
 - Bootstrap cards.
 - Bootstrap nav.

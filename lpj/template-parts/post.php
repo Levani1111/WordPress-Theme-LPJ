@@ -1,4 +1,4 @@
-<div class="card m-4 shadow border text-center" style="max-width: 280px ;min-width: 280px;">
+<div class="card m-2 shadow border text-center" style="max-width: 270px ;min-width: 270px;">
      <?php the_post_thumbnail('post-priview');?>
     <div class="card-body">
         <h5 class="card-title"><?php the_title();?></h5>
