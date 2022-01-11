@@ -11,9 +11,7 @@
         if(have_posts()){
             while(have_posts()) {
                 the_post();
-                if(is_page()){
-                    get_template_part('template-parts/page', 'page');
-                }
+                get_template_part('template-parts/post', 'post');
             }
         }
     ?>
