@@ -13,6 +13,9 @@ add_action('wp_enqueue_scripts', 'load_bootstrap');
 // import walker
 require_once get_template_directory() . '/template-parts/walker.php';
 
+// import widgets
+require_once get_template_directory() . '/template-parts/widgets.php';
+
 // Theme supports 
 add_theme_support('widgets');
 add_theme_support('menus');
