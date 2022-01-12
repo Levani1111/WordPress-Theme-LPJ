@@ -18,6 +18,7 @@
             ?>
         
         </div>
+        
         <div class="col-md-3 bg-light p-4">
              <?php dynamic_sidebar( 'sidebar-0' ); ?>
         </div>

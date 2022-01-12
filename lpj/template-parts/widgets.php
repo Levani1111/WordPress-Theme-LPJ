@@ -32,8 +32,10 @@ class Most_viewed_Widget extends WP_Widget {
  
         echo '<div class="textwidget">';
  
-        // echo esc_html__( $instance['text'], 'text_domain' );
-        echo "<h4>This is Most Viewed Posts</h4>";
+        echo esc_html__( $instance['text'], 'text_domain' );
+        echo '</br>';
+        echo esc_html__( $instance['comment'], 'text_domain' );
+        
  
         echo '</div>';
  
@@ -45,6 +47,7 @@ class Most_viewed_Widget extends WP_Widget {
  
         $title = ! empty( $instance['title'] ) ? $instance['title'] : esc_html__( '', 'text_domain' );
         $text = ! empty( $instance['text'] ) ? $instance['text'] : esc_html__( '', 'text_domain' );
+        $comment = ! empty( $instance['comment'] ) ? $instance['comment'] : esc_html__( '', 'text_domain' );
         ?>
         <p>
         <label for="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>"><?php echo esc_html__( 'Title:', 'text_domain' ); ?></label>
@@ -53,6 +56,10 @@ class Most_viewed_Widget extends WP_Widget {
         <p>
             <label for="<?php echo esc_attr( $this->get_field_id( 'Text' ) ); ?>"><?php echo esc_html__( 'Text:', 'text_domain' ); ?></label>
             <textarea class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'text' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'text' ) ); ?>" type="text" cols="30" rows="10"><?php echo esc_attr( $text ); ?></textarea>
+        </p>
+        <p>
+            <label for="<?php echo esc_attr( $this->get_field_id( 'Comment' ) ); ?>"><?php echo esc_html__( 'Comment:', 'text_domain' ); ?></label>
+            <textarea class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'comment' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'comment' ) ); ?>" type="text" cols="30" rows="10"><?php echo esc_attr( $comment ); ?></textarea>
         </p>
         <?php
  
@@ -64,6 +71,8 @@ class Most_viewed_Widget extends WP_Widget {
  
         $instance['title'] = ( !empty( $new_instance['title'] ) ) ? strip_tags( $new_instance['title'] ) : '';
         $instance['text'] = ( !empty( $new_instance['text'] ) ) ? $new_instance['text'] : '';
+        $instance['comment'] = ( !empty( $new_instance['comment'] ) ) ? $new_instance['comment'] : '';
+ 
  
         return $instance;
     }
