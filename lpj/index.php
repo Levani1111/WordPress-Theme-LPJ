@@ -7,7 +7,7 @@
 ?>
 <div class="container-fluid">
     <div class="row">
-        <div class="col p-4 card-group justify-content-center">
+        <div class="col p-4 card-group justify-content-center" style="align-items: flex-start;">
             <?php
                 if(have_posts()){
                     while(have_posts()) {
