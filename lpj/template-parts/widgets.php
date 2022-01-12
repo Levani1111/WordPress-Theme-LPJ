@@ -23,23 +23,40 @@ class Most_viewed_Widget extends WP_Widget {
     );
  
     public function widget( $args, $instance ) {
- 
-        echo $args['before_widget'];
- 
-        if ( ! empty( $instance['title'] ) ) {
-            echo $args['before_title'] . apply_filters( 'widget_title', $instance['title'] ) . $args['after_title'];
+        
+        $args = [
+            'meta_key' => 'views',
+            'post_type' => 'post',
+            'posts_per_page' => 10,
+            'orderby' => 'meta_value_num',
+            'order' => 'DESC'
+        ];
+        
+        $myposts = new WP_Query($args);
+
+        if($myposts->have_posts()){
+            while($myposts->have_posts()) {
+                $myposts->the_post();
+                get_template_part('template-parts/post', 'post');
+            }
         }
  
-        echo '<div class="textwidget">';
+        // echo $args['before_widget'];
  
-        echo esc_html__( $instance['text'], 'text_domain' );
-        echo '</br>';
-        echo esc_html__( $instance['comment'], 'text_domain' );
+        // if ( ! empty( $instance['title'] ) ) {
+        //     echo $args['before_title'] . apply_filters( 'widget_title', $instance['title'] ) . $args['after_title'];
+        // }
+ 
+        // echo '<div class="textwidget">';
+ 
+        // echo esc_html__( $instance['text'], 'text_domain' );
+        // echo '</br>';
+        // echo esc_html__( $instance['comment'], 'text_domain' );
         
  
-        echo '</div>';
+        // echo '</div>';
  
-        echo $args['after_widget'];
+        // echo $args['after_widget'];
  
     }
  
