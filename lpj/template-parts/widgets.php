@@ -37,7 +37,7 @@ class Most_viewed_Widget extends WP_Widget {
         if($myposts->have_posts()){
             while($myposts->have_posts()) {
                 $myposts->the_post();
-                get_template_part('template-parts/post', 'post');
+                get_template_part('template-parts/post-sidbar', 'post-sidbar');
             }
         }
  

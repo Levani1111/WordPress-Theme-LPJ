@@ -24,6 +24,7 @@ add_theme_support('post-thumbnails');
 // Image sizes
 add_image_size('post-priview', 280, 171, true);
 add_image_size('post-priview-large', 800, 400, true);
+add_image_size('post-priview-small', 270, 172, true);
 
 // Custom logo
 function lpj_custom_logo_setup() {
