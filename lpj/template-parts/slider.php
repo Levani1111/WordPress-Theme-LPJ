@@ -1,3 +1,7 @@
+<?php 
+ $slider_active = get_theme_mod('lpj_slider_activete', 1);
+?>
+<?php if($slider_active):?>
 <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
   <div class="carousel-indicators">
     <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -6,21 +10,39 @@
   </div>
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img src="<?= get_template_directory_uri(). '/assets/images/01-01.jpeg' ?>" class="d-block w-100" alt="...">
+      <?php 
+       $img = get_template_directory_uri(). '/assets/images/01-01.jpeg';
+        if(get_theme_mod('lpj_slider_imge_1','') != ''){
+            $img = get_theme_mod('lpj_slider_imge_1','');
+        }
+      ?>
+      <img src="<?= $img ?>" class="d-block w-100" alt="...">
       <div class="carousel-caption d-none d-md-block">
         <h5>First slide label</h5>
         <p>Some representative placeholder content for the first slide.</p>
       </div>
     </div>
     <div class="carousel-item">
-      <img src="<?= get_template_directory_uri(). '/assets/images/02-02.jpeg' ?>" class="d-block w-100" alt="...">
+    <?php 
+       $img = get_template_directory_uri(). '/assets/images/01-01.jpeg';
+        if(get_theme_mod('lpj_slider_imge_2','') != ''){
+            $img = get_theme_mod('lpj_slider_imge_2','');
+        }
+      ?>
+      <img src="<?= $img ?>" class="d-block w-100" alt="...">
       <div class="carousel-caption d-none d-md-block">
         <h5>Second slide label</h5>
         <p>Some representative placeholder content for the second slide.</p>
       </div>
     </div>
     <div class="carousel-item">
-      <img src="<?= get_template_directory_uri(). '/assets/images/03-03.jpeg' ?>" class="d-block w-100" alt="...">
+    <?php 
+       $img = get_template_directory_uri(). '/assets/images/01-01.jpeg';
+        if(get_theme_mod('lpj_slider_imge_3','') != ''){
+            $img = get_theme_mod('lpj_slider_imge_3','');
+        }
+      ?>
+      <img src="<?= $img ?>" class="d-block w-100" alt="...">
       <div class="carousel-caption d-none d-md-block">
         <h5>Third slide label</h5>
         <p>Some representative placeholder content for the third slide.</p>
@@ -36,3 +58,4 @@
     <span class="visually-hidden">Next</span>
   </button>
 </div>
+<?php endif; ?>

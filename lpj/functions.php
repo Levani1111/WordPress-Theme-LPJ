@@ -85,6 +85,8 @@ add_action( 'widgets_init', 'lpj_widgets_init' );
 
 // Customizer Objects
 function lpj_customize_register( $wp_customize ) {
+
+    // Image slider section
     $wp_customize->add_section( 'lpj_slider_settings', array(
         'title' => __( 'Slider Image Settings' ),
         'description' => __( 'Edit slider image settings' ),
@@ -92,7 +94,72 @@ function lpj_customize_register( $wp_customize ) {
         'capability' => 'edit_theme_options',
       ) );
 
-      $wp_customize->add_setting( 'setting_id', array(
+    // activate slider setting
+    $wp_customize->add_setting( 'lpj_slider_activete', array(
+        'type' => 'theme_mod', // or 'option'
+        'capability' => 'edit_theme_options',
+        'default' => '1',
+        'transport' => 'refresh', // or postMessage
+        'sanitize_callback' => 'sanitize_text_field',
+      ) );
+    
+    $wp_customize->add_control( 'lpj_slider_activete', array(
+        'type' => 'checkbox',
+        'section' => 'lpj_slider_settings', // Required, core or custom.
+        'label' => __( 'Activate Image Slider' ),
+        'description' => __( 'Activate or deactivate the image slider for front page.' ),
+        'input_attrs' => array(
+            'class' => 'my-custom-class-for-js',
+            'style' => '',
+    ),
+    ) );
+    
+    //  slider image 1 setting
+    $wp_customize->add_setting( 'lpj_slider_imge_1', array(
+        'type' => 'theme_mod', // or 'option'
+        'capability' => 'edit_theme_options',
+        'default' => '',
+        'transport' => 'refresh', // or postMessage
+        'sanitize_callback' => 'sanitize_text_field',
+    ) );
+
+    $wp_customize->add_control( 
+        new WP_Customize_Image_Control( 
+            $wp_customize, 
+            'lpj_slider_imge_1', 
+            array(
+        'label' => __( 'Slider Image 1' ),
+        'section' => 'lpj_slider_settings',
+        'height' => 200, //cropper height
+        'width' => 1000, //cropper width
+        'flex_width' => false, // allow any width
+        'flex_height' => false, // allow any height
+    ) ) );
+
+    //  slider image 2 setting
+    $wp_customize->add_setting( 'lpj_slider_imge_2', array(
+        'type' => 'theme_mod', // or 'option'
+        'capability' => 'edit_theme_options',
+        'default' => '',
+        'transport' => 'refresh', // or postMessage
+        'sanitize_callback' => 'sanitize_text_field',
+        ) );
+    
+    $wp_customize->add_control( 
+        new WP_Customize_Image_Control( 
+            $wp_customize, 
+            'lpj_slider_imge_2', 
+            array(
+        'label' => __( 'Slider Image 2' ),
+        'section' => 'lpj_slider_settings',
+        'height' => 200, //cropper height
+        'width' => 1000, //cropper width
+        'flex_width' => false, // allow any width
+        'flex_height' => false, // allow any height
+    ) ) );
+
+      //  slider image 3 setting
+      $wp_customize->add_setting( 'lpj_slider_imge_3', array(
         'type' => 'theme_mod', // or 'option'
         'capability' => 'edit_theme_options',
         'default' => '',
@@ -100,17 +167,18 @@ function lpj_customize_register( $wp_customize ) {
         'sanitize_callback' => 'sanitize_text_field',
       ) );
 
-      $wp_customize->add_control( 'setting_id', array(
-        'type' => 'text',
-        'section' => 'lpj_slider_settings', // Required, core or custom.
-        'label' => __( 'Some text' ),
-        'description' => __( 'This is a date control with a red border.' ),
-        'input_attrs' => array(
-          'class' => 'my-custom-class-for-js',
-          'style' => 'border: 1px solid #900',
-          'placeholder' => __( 'mm/dd/yyyy' ),
-        ),
-        // 'active_callback' => 'is_front_page',
-      ) );
-  }
+      $wp_customize->add_control( 
+          new WP_Customize_Image_Control( 
+              $wp_customize, 
+              'lpj_slider_imge_3', 
+              array(
+            'label' => __( 'Slider Image 3' ),
+            'section' => 'lpj_slider_settings',
+            'height' => 200, //cropper height
+            'width' => 1000, //cropper width
+            'flex_width' => false, // allow any width
+            'flex_height' => false, // allow any height
+      ) ) );
+
+    }
   add_action( 'customize_register', 'lpj_customize_register' );
