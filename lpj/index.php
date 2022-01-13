@@ -1,6 +1,7 @@
 <?php get_header(); 
     get_template_part('template-parts/nav', 'nav');
     
+    echo get_theme_mod('setting_id','');
     if(is_front_page()){
         get_template_part('template-parts/slider', 'slider');
     }
