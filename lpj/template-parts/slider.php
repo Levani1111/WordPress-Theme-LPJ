@@ -18,8 +18,12 @@
       ?>
       <img src="<?= $img ?>" class="d-block w-100" alt="...">
       <div class="carousel-caption d-none d-md-block">
-        <h5>First slide label</h5>
-        <p>Some representative placeholder content for the first slide.</p>
+        <?php 
+         $slider_header_text = get_theme_mod('lpj_slider_header_content_1', '');
+         $slider_content_text = get_theme_mod('lpj_slider_header_text_1', '');
+        ?>
+        <h5><?=$slider_header_text?></h5>
+        <p><?=$slider_content_text?></p>
       </div>
     </div>
     <div class="carousel-item">
@@ -31,8 +35,12 @@
       ?>
       <img src="<?= $img ?>" class="d-block w-100" alt="...">
       <div class="carousel-caption d-none d-md-block">
-        <h5>Second slide label</h5>
-        <p>Some representative placeholder content for the second slide.</p>
+        <?php 
+         $slider_header_text = get_theme_mod('lpj_slider_header_content_2', '');
+         $slider_content_text = get_theme_mod('lpj_slider_header_text_2', '');
+        ?>
+        <h5><?=$slider_header_text?></h5>
+        <p><?=$slider_content_text?></p>
       </div>
     </div>
     <div class="carousel-item">
@@ -44,8 +52,12 @@
       ?>
       <img src="<?= $img ?>" class="d-block w-100" alt="...">
       <div class="carousel-caption d-none d-md-block">
-        <h5>Third slide label</h5>
-        <p>Some representative placeholder content for the third slide.</p>
+        <?php 
+         $slider_header_text = get_theme_mod('lpj_slider_header_content_3', '');
+         $slider_content_text = get_theme_mod( 'lpj_slider_header_text_3', '');
+        ?>
+        <h5><?=$slider_header_text?></h5>
+        <p><?=$slider_content_text?></p>
       </div>
     </div>
   </div>

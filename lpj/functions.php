@@ -103,6 +103,7 @@ function lpj_customize_register( $wp_customize ) {
         'sanitize_callback' => 'sanitize_text_field',
       ) );
     
+    // checkbox control
     $wp_customize->add_control( 'lpj_slider_activete', array(
         'type' => 'checkbox',
         'section' => 'lpj_slider_settings', // Required, core or custom.
@@ -113,7 +114,26 @@ function lpj_customize_register( $wp_customize ) {
             'style' => '',
     ),
     ) );
-    
+
+    //  header text-1 setting
+    // #1
+    $wp_customize->add_setting( 'lpj_slider_header_text_1', array(
+        'type' => 'theme_mod', // or 'option'
+        'capability' => 'edit_theme_options',
+        'default' => 'First slide label',
+        'transport' => 'refresh', // or postMessage
+        'sanitize_callback' => 'sanitize_text_field',
+    ) );
+
+    //  Content text-1 setting
+    $wp_customize->add_setting( 'lpj_slider_header_content_1', array(
+        'type' => 'theme_mod', // or 'option'
+        'capability' => 'edit_theme_options',
+        'default' => 'Some representative placeholder content for the First slide.',
+        'transport' => 'refresh', // or postMessage
+        'sanitize_callback' => 'sanitize_text_field',
+    ) );
+
     //  slider image 1 setting
     $wp_customize->add_setting( 'lpj_slider_imge_1', array(
         'type' => 'theme_mod', // or 'option'
@@ -123,6 +143,7 @@ function lpj_customize_register( $wp_customize ) {
         'sanitize_callback' => 'sanitize_text_field',
     ) );
 
+    //  image 1 control
     $wp_customize->add_control( 
         new WP_Customize_Image_Control( 
             $wp_customize, 
@@ -136,6 +157,47 @@ function lpj_customize_register( $wp_customize ) {
         'flex_height' => false, // allow any height
     ) ) );
 
+       // controls for header text 1
+       $wp_customize->add_control( 'lpj_slider_header_content_1', array(
+        'type' => 'text',
+        'section' => 'lpj_slider_settings', // Required, core or custom.
+        'input_attrs' => array(
+          'class' => 'my-custom-class-for-js',
+          'style' => '',
+          'placeholder' => __( 'Image 1 Header text' ),
+        )
+      ) );
+    
+    // controls for content text 1
+     $wp_customize->add_control( 'lpj_slider_header_text_1', array(
+        'type' => 'textarea',
+        'section' => 'lpj_slider_settings', // Required, core or custom.
+        'input_attrs' => array(
+          'class' => 'my-custom-class-for-js',
+          'style' => '',
+          'placeholder' => __( 'Image 1 content text' ),
+        )
+      ) );
+
+     //  header text-2 setting
+    //  #2
+     $wp_customize->add_setting( 'lpj_slider_header_text_2', array(
+        'type' => 'theme_mod', // or 'option'
+        'capability' => 'edit_theme_options',
+        'default' => 'Second slide label',
+        'transport' => 'refresh', // or postMessage
+        'sanitize_callback' => 'sanitize_text_field',
+    ) );
+
+    //  Content text-2 setting
+    $wp_customize->add_setting( 'lpj_slider_header_content_2', array(
+        'type' => 'theme_mod', // or 'option'
+        'capability' => 'edit_theme_options',
+        'default' => 'Some representative placeholder content for the Second slide.',
+        'transport' => 'refresh', // or postMessage
+        'sanitize_callback' => 'sanitize_text_field',
+    ) );
+
     //  slider image 2 setting
     $wp_customize->add_setting( 'lpj_slider_imge_2', array(
         'type' => 'theme_mod', // or 'option'
@@ -145,6 +207,7 @@ function lpj_customize_register( $wp_customize ) {
         'sanitize_callback' => 'sanitize_text_field',
         ) );
     
+    // image control 2
     $wp_customize->add_control( 
         new WP_Customize_Image_Control( 
             $wp_customize, 
@@ -158,6 +221,47 @@ function lpj_customize_register( $wp_customize ) {
         'flex_height' => false, // allow any height
     ) ) );
 
+     // controls for header text 2
+     $wp_customize->add_control( 'lpj_slider_header_content_2', array(
+        'type' => 'text',
+        'section' => 'lpj_slider_settings', // Required, core or custom.
+        'input_attrs' => array(
+          'class' => 'my-custom-class-for-js',
+          'style' => '',
+          'placeholder' => __( 'Image 2 Header text' ),
+        )
+      ) );
+    
+    // controls for content text 2
+     $wp_customize->add_control( 'lpj_slider_header_text_2', array(
+        'type' => 'textarea',
+        'section' => 'lpj_slider_settings', // Required, core or custom.
+        'input_attrs' => array(
+          'class' => 'my-custom-class-for-js',
+          'style' => '',
+          'placeholder' => __( 'Image 2 content text' ),
+        )
+      ) );
+
+    //  header text-3 setting
+    //  #3
+     $wp_customize->add_setting( 'lpj_slider_header_text_3', array(
+        'type' => 'theme_mod', // or 'option'
+        'capability' => 'edit_theme_options',
+        'default' => 'Third slide label',
+        'transport' => 'refresh', // or postMessage
+        'sanitize_callback' => 'sanitize_text_field',
+    ) );
+
+    //  Content text-3 setting
+    $wp_customize->add_setting( 'lpj_slider_header_content_3', array(
+        'type' => 'theme_mod', // or 'option'
+        'capability' => 'edit_theme_options',
+        'default' => 'Some representative placeholder content for the Third slide.',
+        'transport' => 'refresh', // or postMessage
+        'sanitize_callback' => 'sanitize_text_field',
+    ) );
+
       //  slider image 3 setting
       $wp_customize->add_setting( 'lpj_slider_imge_3', array(
         'type' => 'theme_mod', // or 'option'
@@ -167,6 +271,7 @@ function lpj_customize_register( $wp_customize ) {
         'sanitize_callback' => 'sanitize_text_field',
       ) );
 
+     //  image control 3
       $wp_customize->add_control( 
           new WP_Customize_Image_Control( 
               $wp_customize, 
@@ -179,6 +284,29 @@ function lpj_customize_register( $wp_customize ) {
             'flex_width' => false, // allow any width
             'flex_height' => false, // allow any height
       ) ) );
+
+      // controls for header text 3
+     $wp_customize->add_control( 'lpj_slider_header_content_3', array(
+        'type' => 'text',
+        'section' => 'lpj_slider_settings', // Required, core or custom.
+        'input_attrs' => array(
+          'class' => 'my-custom-class-for-js',
+          'style' => '',
+          'placeholder' => __( 'Image 3 Header text' ),
+        )
+      ) );
+    
+    // controls for content text 3
+     $wp_customize->add_control( 'lpj_slider_header_text_3', array(
+        'type' => 'textarea',
+        'section' => 'lpj_slider_settings', // Required, core or custom.
+        'input_attrs' => array(
+          'class' => 'my-custom-class-for-js',
+          'style' => '',
+          'placeholder' => __( 'Image 3 content text' ),
+        )
+      ) );
+      
 
     }
   add_action( 'customize_register', 'lpj_customize_register' );
