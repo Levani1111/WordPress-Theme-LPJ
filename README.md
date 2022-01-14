@@ -25,7 +25,6 @@ This is a WordPress theme from scratch.
 
 ##### TECH
 
-- Webpack (from Laravel)
 - CSS
 - HTML
 - jQuery
