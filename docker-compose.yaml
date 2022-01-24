@@ -41,7 +41,7 @@ services:
     volumes:
       - wp_data:/var/www/html
       - ./lpj:/var/www/html/wp-content/themes/lpj/
-      # - ./plugins:/var/www/html/wp-content/plugins/
+      - ./plugins:/var/www/html/wp-content/plugins/
       - ./wp-content:/var/www/html/wp-content/
 
   wordpress-cli:
@@ -75,7 +75,7 @@ services:
     volumes:
       - wp_data:/var/www/html
       - ./lpj:/var/www/html/wp-content/themes/lpj/
-      # - ./plugins:/var/www/html/wp-content/plugins/
+      - ./plugins:/var/www/html/wp-content/plugins/
       - ./wp-content:/var/www/html/wp-content/
   
 volumes:
